@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trenova - Build your custom workout</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="logo-container">
+            <img class="title-logo" src="images/TrenovaIcon.png" alt="Trenova title logo app" />
+            <h1 class="logo">Trenova</h1>
+        </div>
+        <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#download">Download</a></li>
+        </ul>
+    </nav>
+    </header>
+
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Create your personalized workout program</h2>
+    <p>With Trenova, simplify your fitness preparation and reach your goals faster.</p>
+
+    <!-- Badge App Store -->
+    <a href="https://apps.apple.com/app/id6745331839" target="_blank">
+      <img class="appstore-badge" src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" />
+    </a>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/TrenovaIcon.png" alt="Trenova app preview" />
+  </div>
+</section>
+
+
+<section id="features" class="features">
+  <h3>Features</h3>
+
+  <!-- Feature 1 -->
+  <div class="feature-section row">
+    <div class="feature-text">
+      <h4>Easily create your program</h4>
+      <p>Design custom programs based on your level, goals, and preferences.</p>
+    </div>
+    <div class="feature-images">
+      <img src="images/appImages2/image2.png" alt="Program creation 1" />
+      <img src="images/appImages2/image3.png" alt="Program creation 2" />
+      <img src="images/appImages2/image4.png" alt="Program creation 3" />
+    </div>
+  </div>
+
+  <!-- Feature 2 -->
+  <div class="feature-section row reverse">
+        <div class="feature-text">
+            <h4>Complete your session & review it</h4>
+            <p>Perform your workout live and rate your session to optimize future programs.</p>
+        </div>
+    <div class="feature-images">
+        <img src="images/appImages2/image5.png" alt="Execution" />
+        <img class="display-image" src="" alt="" />
+        <img src="images/appImages2/image6.png" alt="Review" />
+    </div>
+  </div>
+
+  <!-- Feature 3 -->
+  <div class="feature-section row">
+    <div class="feature-text">
+        <h4>Track your progress and personalize your profile</h4>
+        <p>Review your history and enter your personal stats to customize your training.</p>
+    </div>
+    <div class="feature-images">
+        <img src="images/appImages2/image8.png" alt="Progress tracking 1" />
+        <img class="display-image" src="" alt="" />
+        <img src="images/appImages2/image7.png" alt="Progress tracking 2" />
+    </div>
+  </div>
+</section>
+
+
+
+<section id="download" class="download">
+  <div class="download-card">
+    <h3>Ready to transform your workout routine?</h3>
+    <p>Download Trenova and start today!</p>
+    
+    <a href="https://apps.apple.com/app/id6745331839" target="_blank">
+      <img
+        class="appstore-badge"
+        src="images/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+        alt="Download on the App Store"
+      />
+    </a>
+
+    <div class="qrcode-container">
+      <p class="qrcode-text">Or scan this QR code:</p>
+      <img class="qrcode-img" src="images/trenova-qrcode-apple-store.jpeg" alt="Trenova QR code" />
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding: 2rem; text-align: center; background-color: #f5f5f5; border-radius: 8px; max-width: 600px; margin: 3rem auto; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-family: Arial, sans-serif;">
+  <h3 style="color: #444CE7; margin-bottom: 1rem;">Contact Support</h3>
+  <p>If you have any questions or need assistance, write to us at:</p>
+  <a id="contact-email" style="color: #444CE7; font-weight: 700; font-size: 1.1rem; text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.3s;">
+    [email protected]
+  </a>
+</section>
+
+<script>
+  // Simple email obfuscation
+  const user = "appsbygn";
+  const domain = "gmail.com";
+  const emailLink = document.getElementById("contact-email");
+  emailLink.href = `mailto:${user}@${domain}`;
+  emailLink.textContent = `${user}@${domain}`;
+</script>
+
+
+<footer>
+  <p>© 2025 Trenova. All rights reserved.</p>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

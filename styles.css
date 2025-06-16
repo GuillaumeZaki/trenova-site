@@ -1,0 +1,500 @@
+/* Reset et base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Header --- */
+
+header {
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espace entre logo et texte */
+}
+
+.title-logo {
+  width: 40px;  /* ajuste selon la taille souhaitée */
+  height: auto;
+  border-radius: 10px;
+}
+
+.logo {
+  color: #444CE7; /* mauve */
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  margin: 0; /* pour éviter un margin par défaut autour du h1 */
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  color: #444CE7;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #444CE7;
+}
+
+/* --- Hero --- */
+
+.hero {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-image img {
+  width: 200px; /* ou la taille que tu souhaites */
+  height: auto; /* pour garder les proportions */
+  max-width: 100%; /* pour que ça reste responsive */
+}
+
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.hero-text h2 {
+  color: #444CE7;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  animation: slideInLeft 1s ease forwards;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.appstore-badge {
+  margin-top: 20px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.appstore-badge:hover {
+  transform: scale(1.05);
+}
+
+
+.btn-primary {
+  background: #444CE7;
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: rgb(68, 76, 231);
+  cursor: pointer;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  text-align: center;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(68, 76, 231, 0.25);
+}
+
+/* --- Features --- */
+
+.features {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.features h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #444CE7;
+}
+
+.feature-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  max-width: 1100px;
+  flex-wrap: wrap;
+  transition: transform 0.3s ease;
+}
+
+.feature-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.feature-text h4 {
+  font-size: 1.5rem;
+  color: #444CE7;
+  margin-bottom: 10px;
+}
+
+.feature-text p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.feature-images {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.feature-images img {
+  width: 120px;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.5s ease, z-index 0.3s ease;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+  transform: translateY(0) rotate(calc(var(--i, 0) * 1deg));
+  background-color: transparent;
+}
+
+.feature-images img:nth-child(1) { --i: -2; }
+.feature-images img:nth-child(2) { --i: 0; }
+.feature-images img:nth-child(3) { --i: 2; }
+
+.feature-images img:hover {
+  transform: scale(1.2) translateY(-10px);
+  z-index: 10;
+  /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); */
+}
+
+.display-image {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feature-section {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .feature-images {
+    justify-content: center;
+  }
+
+  .feature-images img {
+    width: 100px;
+  }
+}
+
+
+/* --- Download Section --- */
+
+.download {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.download-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+  display: inline-block;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.download-card h3 {
+  font-size: 1.8rem;
+  color: #444CE7;
+  margin-bottom: 10px;
+}
+
+.download-card p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.appstore-badge {
+  height: 55px;
+  transition: transform 0.3s ease;
+}
+
+.appstore-badge:hover {
+  transform: scale(1.08);
+}
+
+.qrcode-container {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qrcode-text {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.qrcode-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.qrcode-img:hover {
+  transform: scale(1.08);
+}
+
+
+
+/* --- Footer --- */
+
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+footer a {
+  margin: 0 10px;
+  color: #444CE7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* --- Animations --- */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* @keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px 5px rgba(124, 58, 237, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px 15px rgba(124, 58, 237, 0.9);
+  }
+} */
+
+/* --- Responsive --- */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .feature-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* Styles généraux pour desktop restent tels quels */
+
+/* Responsive pour écrans jusqu'à 600px (smartphones) */
+@media (max-width: 600px) {
+  /* Désactiver le sticky header sur mobile */
+  header {
+    position: static;
+    box-shadow: none;
+  }
+
+  /* Adapter la taille de la police globalement */
+  body {
+    font-size: 14px; /* Ajuste selon ce qui te semble lisible */
+  }
+
+  h1.logo {
+    font-size: 1.4rem;
+  }
+
+  h2, h3, h4 {
+    font-size: 1.1rem;
+  }
+
+  /* Navigation */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+.nav-links {
+    display: none;
+  }
+
+
+
+  /* Hero section */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+.hero-image {
+    /* width: 30; */
+    display: none;
+  }
+
+  .hero-text {
+    margin-bottom: 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Feature sections */
+  .features .feature-section {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .feature-text {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  /* Supprimer rotation/inclinaison des images */
+  .feature-images img {
+    transform: none !important;
+    width: 80%;
+    max-width: 250px;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Download section */
+  .download-card {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .appstore-badge {
+    width: 140px;
+  }
+
+  .qrcode-container {
+    margin-top: 1rem;
+  }
+
+  /* Footer */
+  footer p, footer a {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
